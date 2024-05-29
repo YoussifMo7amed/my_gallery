@@ -44,19 +44,14 @@ class CustomButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor ?? Colors.black,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(threeRadius ?? 20),
-              topRight: Radius.circular(threeRadius ?? 20),
-              bottomRight: Radius.circular(threeRadius ?? 20),
-              bottomLeft: Radius.circular(lastRadius ?? 0),
-            ),
+            borderRadius: BorderRadius.circular(10)
           ),
         ),
         onPressed: onPressed,
         child: TextApp(
           theme: TextStyle(
                color: textColor ?? Colors.white,
-            fontWeight:FontweightHelper.medium ,
+            fontWeight:FontweightHelper.bold ,
           
             fontSize: 16.sp,
           ),

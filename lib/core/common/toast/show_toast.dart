@@ -34,5 +34,4 @@ class ShowToast {
       );
 }
 
-class Fluttertoast {
-}
+
