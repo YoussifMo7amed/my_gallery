@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:my_gallery/core/service/graphql/api_service.dart';
-import 'package:my_gallery/core/service/graphql/dio_factory.dart';
+import 'package:my_gallery/core/service/Api/api_service.dart';
+import 'package:my_gallery/core/service/Api/dio_factory.dart';
 
 
 final sl = GetIt.instance;
