@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_gallery/core/styles/fonts/font_wieght_helper.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -40,12 +41,14 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+        
       controller: controller,
-      cursorColor:const Color(0XFF988F8C),
+      cursorColor: Colors.white,
       style: TextStyle(
+        
         fontSize: 16.sp,
         fontWeight: FontWeight.w500,
-        color: const Color(0XFF988F8C),
+        color:  Color(0XFF988F8C),
       ),
       validator: (value) {
         return validator!(value);
@@ -56,42 +59,45 @@ class CustomTextField extends StatelessWidget {
       maxLines: maxLines,
       readOnly: readOnly,
       decoration: InputDecoration(
+        
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(30),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15),
-          borderSide: const BorderSide(color: Colors.white),
+          
+          borderRadius: BorderRadius.circular(30),
+          borderSide: const BorderSide(color: Colors.transparent),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15),
-          borderSide: const BorderSide(color: Colors.white),
+          borderRadius: BorderRadius.circular(30),
+          borderSide: const BorderSide(color: Colors.transparent),
         ),
         errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15),
-          borderSide: const BorderSide(color: Colors.red),
+          borderRadius: BorderRadius.circular(30),
+          borderSide: const BorderSide(color: Colors.transparent),
         ),
         focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15),
-          borderSide: const BorderSide(color: Colors.red),
+          borderRadius: BorderRadius.circular(30),
+          borderSide: const BorderSide(color: Colors.transparent),
         ),
         contentPadding:
             const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-        filled: filled,
-        fillColor: fillColour,
+        filled: true,
+        fillColor: Colors.white,
         suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
         hintText: hintText,
+        
         hintStyle: hintStyle ??
             TextStyle(
               color: const Color(0XFF988F8C),
-              fontWeight: FontWeight.w400,
+              fontWeight:FontweightHelper.bold,
               fontSize: 14.sp,
             ),
         errorStyle: TextStyle(
           color: Colors.red,
-          fontWeight: FontWeight.w400,
-          fontSize: 12.sp,
+       fontWeight:    FontweightHelper.bold,    
+             fontSize: 12.sp,
         ),
       ),
     );
