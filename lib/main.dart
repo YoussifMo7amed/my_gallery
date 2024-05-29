@@ -11,12 +11,10 @@ void main() async {
   Bloc.observer = AppBlocObserver();
   await SharedPref().instantiatePreferences();
   await setupInjector();
-    await SystemChrome.setPreferredOrientations([
+  await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]).then((_) {
     runApp(const MyGallery());
   });
 }
-
-
