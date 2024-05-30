@@ -10,4 +10,6 @@ class AppImages {
  static const logout = 'assets/images/features/logout.png';
  static const upload = 'assets/images/features/upload.png';
  static const avatar ='assets/images/features/avatar.png';
+ static const dialogImage1='assets/images/core/dialog1.png';
+ static const dialogImage2='assets/images/core/dialog2.png';
 }

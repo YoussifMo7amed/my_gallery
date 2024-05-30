@@ -7,12 +7,12 @@ class GalleryRepo {
 
   final GalleryDataSource _dataSource;
 
-  Future<ApiResult<GalleryResponse>> gallery(String token) async {
+  Future<ApiResult<GalleryResponse>> getGallery(String token) async {
     try {
-      final response = await _dataSource.getgallery(token);
+      final response = await _dataSource.getGallery(token);
       return ApiResult.success(response);
     } catch (error) {
-      return  ApiResult.failure(error.toString());
+      return ApiResult.failure(error.toString());
     }
   }
 }

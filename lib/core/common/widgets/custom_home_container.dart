@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_gallery/core/common/widgets/text_app.dart';
 import 'package:my_gallery/core/styles/fonts/font_wieght_helper.dart';
 import 'package:my_gallery/core/theme/colors.dart';
-import 'package:my_gallery/core/theme/styles.dart';
 
 
 class CustomHomeContainer extends StatelessWidget {
