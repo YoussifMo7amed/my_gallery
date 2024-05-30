@@ -23,7 +23,6 @@ class LoginButtom extends StatelessWidget {
             Navigator.pushNamedAndRemoveUntil(
                 context, Routes.home, (route) => false).then((value) {
                 
-                  print('hiiiiiiiiiii>>>>>>${loginData.user.name}');
                 });
           },
           error: (message) {

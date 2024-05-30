@@ -11,11 +11,6 @@ AuthResponse _$AuthResponseFromJson(Map<String, dynamic> json) => AuthResponse(
       token: json['token'] as String,
     );
 
-Map<String, dynamic> _$AuthResponseToJson(AuthResponse instance) =>
-    <String, dynamic>{
-      'user': instance.user,
-      'token': instance.token,
-    };
 
 User _$UserFromJson(Map<String, dynamic> json) => User(
       id: (json['id'] as num).toInt(),
@@ -26,11 +21,3 @@ User _$UserFromJson(Map<String, dynamic> json) => User(
       updatedAt: json['updated_at'] as String,
     );
 
-Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'email': instance.email,
-      'email_verified_at': instance.emailVerifiedAt,
-      'created_at': instance.createdAt,
-      'updated_at': instance.updatedAt,
-    };
