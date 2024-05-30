@@ -6,39 +6,31 @@ part of 'login_responce.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-LoginResponce _$LoginResponceFromJson(Map<String, dynamic> json) =>
-    LoginResponce(
-      json['data'] == null
-          ? null
-          : LoginDataModel.fromJson(json['data'] as Map<String, dynamic>),
+AuthResponse _$AuthResponseFromJson(Map<String, dynamic> json) => AuthResponse(
+      user: User.fromJson(json['user'] as Map<String, dynamic>),
+      token: json['token'] as String,
     );
 
-Map<String, dynamic> _$LoginResponceToJson(LoginResponce instance) =>
+Map<String, dynamic> _$AuthResponseToJson(AuthResponse instance) =>
     <String, dynamic>{
-      'data': instance.data,
-    };
-
-LoginDataModel _$LoginDataModelFromJson(Map<String, dynamic> json) =>
-    LoginDataModel(
-      json['login'] == null
-          ? null
-          : LoginModel.fromJson(json['login'] as Map<String, dynamic>),
-      json['token'] as String?,
-    );
-
-Map<String, dynamic> _$LoginDataModelToJson(LoginDataModel instance) =>
-    <String, dynamic>{
-      'login': instance.login,
+      'user': instance.user,
       'token': instance.token,
     };
 
-LoginModel _$LoginModelFromJson(Map<String, dynamic> json) => LoginModel(
-      id: (json['id'] as num?)?.toInt(),
-      name: json['name'] as String?,
+User _$UserFromJson(Map<String, dynamic> json) => User(
+      id: (json['id'] as num).toInt(),
+      name: json['name'] as String,
+      email: json['email'] as String,
+      emailVerifiedAt: json['email_verified_at'] as String,
+      createdAt: json['created_at'] as String,
+      updatedAt: json['updated_at'] as String,
     );
 
-Map<String, dynamic> _$LoginModelToJson(LoginModel instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
+      'email': instance.email,
+      'email_verified_at': instance.emailVerifiedAt,
+      'created_at': instance.createdAt,
+      'updated_at': instance.updatedAt,
     };

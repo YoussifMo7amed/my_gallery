@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'auth_cubit.dart';
+part of 'gallery_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,13 +15,13 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$AuthState {
+mixin _$GalleryState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
-    required TResult Function(AuthResponse login) success,
+    required TResult Function(GalleryResponse login) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,7 +29,7 @@ mixin _$AuthState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String error)? error,
-    TResult? Function(AuthResponse login)? success,
+    TResult? Function(GalleryResponse login)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,7 +37,7 @@ mixin _$AuthState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
-    TResult Function(AuthResponse login)? success,
+    TResult Function(GalleryResponse login)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -69,15 +69,16 @@ mixin _$AuthState {
 }
 
 /// @nodoc
-abstract class $AuthStateCopyWith<$Res> {
-  factory $AuthStateCopyWith(AuthState value, $Res Function(AuthState) then) =
-      _$AuthStateCopyWithImpl<$Res, AuthState>;
+abstract class $GalleryStateCopyWith<$Res> {
+  factory $GalleryStateCopyWith(
+          GalleryState value, $Res Function(GalleryState) then) =
+      _$GalleryStateCopyWithImpl<$Res, GalleryState>;
 }
 
 /// @nodoc
-class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
-    implements $AuthStateCopyWith<$Res> {
-  _$AuthStateCopyWithImpl(this._value, this._then);
+class _$GalleryStateCopyWithImpl<$Res, $Val extends GalleryState>
+    implements $GalleryStateCopyWith<$Res> {
+  _$GalleryStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -94,7 +95,7 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$AuthStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$GalleryStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
@@ -108,7 +109,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'AuthState.initial()';
+    return 'GalleryState.initial()';
   }
 
   @override
@@ -126,7 +127,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
-    required TResult Function(AuthResponse login) success,
+    required TResult Function(GalleryResponse login) success,
   }) {
     return initial();
   }
@@ -137,7 +138,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String error)? error,
-    TResult? Function(AuthResponse login)? success,
+    TResult? Function(GalleryResponse login)? success,
   }) {
     return initial?.call();
   }
@@ -148,7 +149,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
-    TResult Function(AuthResponse login)? success,
+    TResult Function(GalleryResponse login)? success,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -195,7 +196,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements AuthState {
+abstract class _Initial implements GalleryState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -208,7 +209,7 @@ abstract class _$$LoadingStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingStateImplCopyWithImpl<$Res>
-    extends _$AuthStateCopyWithImpl<$Res, _$LoadingStateImpl>
+    extends _$GalleryStateCopyWithImpl<$Res, _$LoadingStateImpl>
     implements _$$LoadingStateImplCopyWith<$Res> {
   __$$LoadingStateImplCopyWithImpl(
       _$LoadingStateImpl _value, $Res Function(_$LoadingStateImpl) _then)
@@ -222,7 +223,7 @@ class _$LoadingStateImpl implements _LoadingState {
 
   @override
   String toString() {
-    return 'AuthState.loading()';
+    return 'GalleryState.loading()';
   }
 
   @override
@@ -240,7 +241,7 @@ class _$LoadingStateImpl implements _LoadingState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
-    required TResult Function(AuthResponse login) success,
+    required TResult Function(GalleryResponse login) success,
   }) {
     return loading();
   }
@@ -251,7 +252,7 @@ class _$LoadingStateImpl implements _LoadingState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String error)? error,
-    TResult? Function(AuthResponse login)? success,
+    TResult? Function(GalleryResponse login)? success,
   }) {
     return loading?.call();
   }
@@ -262,7 +263,7 @@ class _$LoadingStateImpl implements _LoadingState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
-    TResult Function(AuthResponse login)? success,
+    TResult Function(GalleryResponse login)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -309,7 +310,7 @@ class _$LoadingStateImpl implements _LoadingState {
   }
 }
 
-abstract class _LoadingState implements AuthState {
+abstract class _LoadingState implements GalleryState {
   const factory _LoadingState() = _$LoadingStateImpl;
 }
 
@@ -324,7 +325,7 @@ abstract class _$$ErrorStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorStateImplCopyWithImpl<$Res>
-    extends _$AuthStateCopyWithImpl<$Res, _$ErrorStateImpl>
+    extends _$GalleryStateCopyWithImpl<$Res, _$ErrorStateImpl>
     implements _$$ErrorStateImplCopyWith<$Res> {
   __$$ErrorStateImplCopyWithImpl(
       _$ErrorStateImpl _value, $Res Function(_$ErrorStateImpl) _then)
@@ -354,7 +355,7 @@ class _$ErrorStateImpl implements _ErrorState {
 
   @override
   String toString() {
-    return 'AuthState.error(error: $error)';
+    return 'GalleryState.error(error: $error)';
   }
 
   @override
@@ -380,7 +381,7 @@ class _$ErrorStateImpl implements _ErrorState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
-    required TResult Function(AuthResponse login) success,
+    required TResult Function(GalleryResponse login) success,
   }) {
     return error(this.error);
   }
@@ -391,7 +392,7 @@ class _$ErrorStateImpl implements _ErrorState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String error)? error,
-    TResult? Function(AuthResponse login)? success,
+    TResult? Function(GalleryResponse login)? success,
   }) {
     return error?.call(this.error);
   }
@@ -402,7 +403,7 @@ class _$ErrorStateImpl implements _ErrorState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
-    TResult Function(AuthResponse login)? success,
+    TResult Function(GalleryResponse login)? success,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -449,7 +450,7 @@ class _$ErrorStateImpl implements _ErrorState {
   }
 }
 
-abstract class _ErrorState implements AuthState {
+abstract class _ErrorState implements GalleryState {
   const factory _ErrorState({required final String error}) = _$ErrorStateImpl;
 
   String get error;
@@ -464,12 +465,12 @@ abstract class _$$SuccessStateImplCopyWith<$Res> {
           _$SuccessStateImpl value, $Res Function(_$SuccessStateImpl) then) =
       __$$SuccessStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({AuthResponse login});
+  $Res call({GalleryResponse login});
 }
 
 /// @nodoc
 class __$$SuccessStateImplCopyWithImpl<$Res>
-    extends _$AuthStateCopyWithImpl<$Res, _$SuccessStateImpl>
+    extends _$GalleryStateCopyWithImpl<$Res, _$SuccessStateImpl>
     implements _$$SuccessStateImplCopyWith<$Res> {
   __$$SuccessStateImplCopyWithImpl(
       _$SuccessStateImpl _value, $Res Function(_$SuccessStateImpl) _then)
@@ -484,7 +485,7 @@ class __$$SuccessStateImplCopyWithImpl<$Res>
       login: null == login
           ? _value.login
           : login // ignore: cast_nullable_to_non_nullable
-              as AuthResponse,
+              as GalleryResponse,
     ));
   }
 }
@@ -495,11 +496,11 @@ class _$SuccessStateImpl implements _SuccessState {
   const _$SuccessStateImpl({required this.login});
 
   @override
-  final AuthResponse login;
+  final GalleryResponse login;
 
   @override
   String toString() {
-    return 'AuthState.success(login: $login)';
+    return 'GalleryState.success(login: $login)';
   }
 
   @override
@@ -525,7 +526,7 @@ class _$SuccessStateImpl implements _SuccessState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
-    required TResult Function(AuthResponse login) success,
+    required TResult Function(GalleryResponse login) success,
   }) {
     return success(login);
   }
@@ -536,7 +537,7 @@ class _$SuccessStateImpl implements _SuccessState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String error)? error,
-    TResult? Function(AuthResponse login)? success,
+    TResult? Function(GalleryResponse login)? success,
   }) {
     return success?.call(login);
   }
@@ -547,7 +548,7 @@ class _$SuccessStateImpl implements _SuccessState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
-    TResult Function(AuthResponse login)? success,
+    TResult Function(GalleryResponse login)? success,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -594,11 +595,11 @@ class _$SuccessStateImpl implements _SuccessState {
   }
 }
 
-abstract class _SuccessState implements AuthState {
-  const factory _SuccessState({required final AuthResponse login}) =
+abstract class _SuccessState implements GalleryState {
+  const factory _SuccessState({required final GalleryResponse login}) =
       _$SuccessStateImpl;
 
-  AuthResponse get login;
+  GalleryResponse get login;
   @JsonKey(ignore: true)
   _$$SuccessStateImplCopyWith<_$SuccessStateImpl> get copyWith =>
       throw _privateConstructorUsedError;

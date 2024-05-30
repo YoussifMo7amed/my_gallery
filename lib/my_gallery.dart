@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_gallery/core/di/injection_container.dart';
 import 'package:my_gallery/core/routes/app_router.dart';
 import 'package:my_gallery/core/routes/routers.dart';
+import 'package:my_gallery/core/service/shared_pref/pref_keys.dart';
+import 'package:my_gallery/core/service/shared_pref/shared_pref.dart';
 
 
 class MyGallery extends StatelessWidget {
@@ -17,7 +19,12 @@ class MyGallery extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         navigatorKey: sl<GlobalKey<NavigatorState>>(),
         onGenerateRoute: AppRouter.generateroutes,
-        initialRoute: Routes.login,
+        initialRoute:SharedPref()
+                                .getString(PrefKeys.accessToken) !=
+                            null?
+                       
+                             Routes.home
+                        : Routes.login,
       ),
     );
   }

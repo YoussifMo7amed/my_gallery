@@ -1,31 +1,47 @@
 import 'package:json_annotation/json_annotation.dart';
+
 part 'login_responce.g.dart';
 
 @JsonSerializable()
-class LoginResponce {
-  LoginResponce(this.data);
+class AuthResponse {
+  final User user;
+  final String token;
 
-  factory LoginResponce.fromJson(Map<String, dynamic> json) =>
-      _$LoginResponceFromJson(json);
-  LoginDataModel? data;
+  AuthResponse({
+    required this.user,
+    required this.token,
+  });
+
+  factory AuthResponse.fromJson(Map<String, dynamic> json) =>
+      _$AuthResponseFromJson(json);
+
 }
 
 @JsonSerializable()
-class LoginDataModel {
-  LoginDataModel(this.login,this.token);
+class User {
+  final int id;
+  final String name;
+  final String email;
 
-  factory LoginDataModel.fromJson(Map<String, dynamic> json) =>
-      _$LoginDataModelFromJson(json);
-  LoginModel? login;
-  String?token;
-}
+  @JsonKey(name: 'email_verified_at')
+  final String emailVerifiedAt;
 
-@JsonSerializable()
-class LoginModel {
-  LoginModel({required this.id, required this.name});
-  factory LoginModel.fromJson(Map<String, dynamic> json) =>
-      _$LoginModelFromJson(json);
+  @JsonKey(name: 'created_at')
+  final String createdAt;
 
-  final int? id;
-  final String? name;
+  @JsonKey(name: 'updated_at')
+  final String updatedAt;
+
+  User({
+    required this.id,
+    required this.name,
+    required this.email,
+    required this.emailVerifiedAt,
+    required this.createdAt,
+    required this.updatedAt,
+  });
+
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+
+ 
 }

@@ -21,13 +21,13 @@ class _ApiService implements ApiService {
   String? baseUrl;
 
   @override
-  Future<LoginResponce> login(FormData formdata) async {
+  Future<AuthResponse> login(FormData formdata) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = formdata;
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<LoginResponce>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<AuthResponse>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -43,7 +43,66 @@ class _ApiService implements ApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = LoginResponce.fromJson(_result.data!);
+    final value = AuthResponse.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<GalleryResponse> gallery(String token) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'Authorization': token};
+    _headers.removeWhere((k, v) => v == null);
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<GalleryResponse>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/my-gallery',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = GalleryResponse.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<UploadImageResponse> uploadImage(
+    String token,
+    FormData formdata,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'Authorization': token};
+    _headers.removeWhere((k, v) => v == null);
+    final _data = formdata;
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<UploadImageResponse>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/upload',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = UploadImageResponse.fromJson(_result.data!);
     return value;
   }
 

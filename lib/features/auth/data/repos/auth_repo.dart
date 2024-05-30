@@ -8,7 +8,7 @@ class AuthRepos {
 
   final AuthDataSource _dataSource;
 
-  Future<ApiResult<LoginResponce>> login(LoginRequestBody body) async {
+  Future<ApiResult<AuthResponse>> login(LoginRequestBody body) async {
     try {
       final response = await _dataSource.login(body);
       return ApiResult.success(response);

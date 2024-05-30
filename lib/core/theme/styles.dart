@@ -17,5 +17,10 @@ class TextStyles {
     fontWeight: FontweightHelper.bold,
     color: ColorsManager.textColor,
   );
+   static TextStyle font32deepgreysemiBold = TextStyle(
+    fontSize: 22.sp,
+    fontWeight: FontweightHelper.medium,
+    color: ColorsManager.textColor,
+  );
 
 }
