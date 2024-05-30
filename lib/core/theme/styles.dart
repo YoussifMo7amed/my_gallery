@@ -18,8 +18,8 @@ class TextStyles {
     color: ColorsManager.textColor,
   );
    static TextStyle font32deepgreysemiBold = TextStyle(
-    fontSize: 32.sp,
-    fontWeight: FontweightHelper.semiBold,
+    fontSize: 22.sp,
+    fontWeight: FontweightHelper.medium,
     color: ColorsManager.textColor,
   );
 

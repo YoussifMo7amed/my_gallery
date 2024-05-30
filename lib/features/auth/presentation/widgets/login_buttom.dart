@@ -4,6 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_gallery/core/common/toast/show_toast.dart';
 import 'package:my_gallery/core/common/widgets/custom_button.dart';
 import 'package:my_gallery/core/routes/routers.dart';
+import 'package:my_gallery/core/service/shared_pref/pref_keys.dart';
+import 'package:my_gallery/core/service/shared_pref/shared_pref.dart';
 import 'package:my_gallery/features/auth/presentation/bloc/auth/auth_cubit.dart';
 
 class LoginButtom extends StatelessWidget {
@@ -15,12 +17,16 @@ class LoginButtom extends StatelessWidget {
       listener: (context, state) {
         state.whenOrNull(
           success: (loginData)async {
+
             ShowToast.showToastSuccessTop(
               message: 'Login successfully',
             );
 
             Navigator.pushNamedAndRemoveUntil(
-                context, Routes.home, (route) => false);
+                context, Routes.home, (route) => false).then((value) {
+                
+                  print('hiiiiiiiiiii>>>>>>${loginData.user.name}');
+                });
           },
           error: (message) {
             ShowToast.showToastErrorTop(

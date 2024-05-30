@@ -19,7 +19,12 @@ class AppRouter {
           child: const LoginScreen(),
         ));
 case Routes.home:
-        return BaseRoute(page: const HomeScreen());
+        return BaseRoute(page: MultiBlocProvider(
+          providers: [ 
+            BlocProvider(
+          create: (context) => sl<AuthCubit>(),)
+          ],
+          child: const HomeScreen()));
       default:
         return BaseRoute(page: const UnderBuildScreen());
     }

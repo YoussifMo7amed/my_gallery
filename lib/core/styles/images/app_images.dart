@@ -9,4 +9,5 @@ class AppImages {
  static const homeShape ='assets/svgs/home_shape.svg';
  static const logout = 'assets/images/features/logout.png';
  static const upload = 'assets/images/features/upload.png';
+ static const avatar ='assets/images/features/avatar.png';
 }

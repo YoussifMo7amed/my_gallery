@@ -1,32 +1,36 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_gallery/core/common/widgets/text_app.dart';
+import 'package:my_gallery/core/service/shared_pref/pref_keys.dart';
+import 'package:my_gallery/core/service/shared_pref/shared_pref.dart';
 import 'package:my_gallery/core/styles/images/app_images.dart';
 import 'package:my_gallery/core/theme/styles.dart';
 
 class HomeTittleAndImage extends StatelessWidget {
-  const HomeTittleAndImage({super.key});
-
+  HomeTittleAndImage({super.key});
+  final String? name = SharedPref().getString(PrefKeys.name);
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 30.w),
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 30.w),
       child: Row(
         children: [
-          TextApp(text: 'Welcome\n Mina', theme: TextStyles.font32deepgreysemiBold),
-
+          TextApp(
+              text: 'Welcome\n $name ',
+              theme: TextStyles.font32deepgreysemiBold),
           const Spacer(),
           Padding(
-            padding:  EdgeInsets.only(bottom: 30.h,right: 0.w),
+            padding: EdgeInsets.only(bottom: 30.h, right: 0.w),
             child: Container(
               height: 60.h,
               width: 60.w,
-              decoration:  BoxDecoration(
+              decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
                 color: Colors.white,
-                image: DecorationImage(
-                  image: AssetImage(AppImages.loginShapes,),
+                image: const DecorationImage(
+                  image: AssetImage(
+                    AppImages.avatar,
+                  ),
                   fit: BoxFit.cover,
                 ),
               ),

@@ -13,7 +13,7 @@ class HomeBody extends StatelessWidget {
         child: Column(
       children: [
         // Home Tittle and Image
-        const HomeTittleAndImage(),
+         HomeTittleAndImage(),
         const SizedBox(height: 10),
         // Home Buttoms
         const HomeButtoms(),
