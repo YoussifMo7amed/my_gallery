@@ -7,7 +7,7 @@ class LoginResponce {
 
   factory LoginResponce.fromJson(Map<String, dynamic> json) =>
       _$LoginResponceFromJson(json);
-  LoginDataModel? data;
+late  LoginDataModel? data;
 }
 
 @JsonSerializable()
@@ -17,7 +17,7 @@ class LoginDataModel {
   factory LoginDataModel.fromJson(Map<String, dynamic> json) =>
       _$LoginDataModelFromJson(json);
   LoginModel? login;
-  String?token;
+ final String? token;
 }
 
 @JsonSerializable()
